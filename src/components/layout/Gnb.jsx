@@ -24,7 +24,7 @@ function Gnb() {
                                 color: location.pathname === item.path ? 'primary' : 'inherit',
                                 fontWeight: location.pathname === item.path ? 'bold' : 'normal',
                                 '&::before': {
-                                    content: `"${item.icon}"`,
+                                    content: `""`,
                                 },
                                 '&:hover': {
                                     color: 'red',
