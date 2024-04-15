@@ -1,5 +1,6 @@
 import { Heading } from '@chakra-ui/react'
 import { useLocation } from 'react-router-dom'
+
 function Title() {
     const location = useLocation()
 
@@ -12,8 +13,10 @@ function Title() {
     // 만약 경로가 '/'이면 'Home'을 반환한다.
     const pageTitle = pathArr.length > 0 ? pathArr[pathArr.length - 1] : 'Home'
 
-    const title =pageTitle.charAt(0).toUpperCase+pageTitle.slice(1)
+    // 첫 글자를 대문자로 변환한다.
+    const title = pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1)
 
     return <Heading as={'h2'}>{title}</Heading>
 }
+
 export default Title

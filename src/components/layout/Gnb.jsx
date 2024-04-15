@@ -31,7 +31,7 @@ function Gnb() {
                                 },
                             }}
                         >
-                            {item.name}
+                            {item.icon} {item.name}
                         </Link>
                     </li>
                 ))}
