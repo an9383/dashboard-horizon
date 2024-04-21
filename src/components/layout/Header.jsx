@@ -5,10 +5,8 @@ import styled from 'styled-components'
 import Gnb from './Gnb'
 
 function Header() {
-    const location = useLocation()
-
     return (
-        <header className="flex flex-col items-center justify-between gap-8 p-5 bg-gray-300 border-2 border-gray-600">
+        <header className="flex-col items-center justify-between hidden gap-8 p-5 bg-gray-300 border-2 border-gray-600 md:flex">
             <h1 className="text-3xl font-bold text-secondary">logo</h1>
             <Gnb />
             <Util>
