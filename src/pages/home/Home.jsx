@@ -3,13 +3,15 @@ import { Card, SimpleGrid } from '@chakra-ui/react'
 import miniStData from '../../data/miniStData'
 import ComplexTable from './components/ComplexTable'
 import LineChart from '../../components/charts/LineChart'
-import { lineChartDataTotalSpent, lineChartOptionsTotalSpent } from '../../variables/charts'
+import PieChart from '../../components/charts/PieChart'
+import { lineChartDataTotalSpent, lineChartOptionsTotalSpent, pieChartOptions, pieChartData} from '../../variables/charts'
 
 function Home() {
     return (
         <div>
             <Card>
                 <LineChart chartData={lineChartDataTotalSpent} chartOptions={lineChartOptionsTotalSpent} />
+                <PieChart options={pieChartOptions} series={pieChartData} type="pie" width={380} />
             </Card>
             {/* Complex Table */}
             <ComplexTable />
