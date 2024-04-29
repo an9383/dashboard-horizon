@@ -1,17 +1,37 @@
 import MiniSt from '../../components/card/MiniSt'
-import { Card, SimpleGrid } from '@chakra-ui/react'
+import { Button, Card, SimpleGrid } from '@chakra-ui/react'
 import miniStData from '../../data/miniStData'
 import ComplexTable from './components/ComplexTable'
 import LineChart from '../../components/charts/LineChart'
-import PieChart from '../../components/charts/PieChart'
-import { lineChartDataTotalSpent, lineChartOptionsTotalSpent, pieChartOptions, pieChartData} from '../../variables/charts'
+import { lineChartDataTotalSpent, lineChartOptionsTotalSpent } from '../../variables/charts'
+import { useEffect, useState } from 'react'
 
 function Home() {
+    const [color, setColor] = useState('yellow')
+
+    // 마운트 될 때 배경색 변경
+    useEffect(() => {
+        document.body.style.backgroundColor = color
+        document.body.id = 'home'
+        document.body.classList.add(color)
+
+        // 언마운트 될 때
+        return () => {
+            document.body.style.backgroundColor = 'white'
+            document.body.id = ''
+            document.body.classList.remove(color)
+        }
+    }, [color])
+
+    function toggleColor() {
+        setColor((preColor) => (preColor === 'yellow' ? 'red' : 'yellow'))
+    }
+
     return (
         <div>
+            <button onClick={toggleColor}>색상 변경</button>
             <Card>
                 <LineChart chartData={lineChartDataTotalSpent} chartOptions={lineChartOptionsTotalSpent} />
-                <PieChart options={pieChartOptions} series={pieChartData} type="pie" width={380} />
             </Card>
             {/* Complex Table */}
             <ComplexTable />

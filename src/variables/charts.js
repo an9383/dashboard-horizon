@@ -247,8 +247,7 @@ export const pieChartOptions = {
     },
 }
 
-export const pieChartData = [44, 55, 13, 43, 22]
-//export const pieChartData = [63, 25, 12]
+export const pieChartData = [63, 25, 12]
 
 // Total Spent Default
 
