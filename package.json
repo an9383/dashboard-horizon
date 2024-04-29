@@ -24,7 +24,7 @@
         "twin.macro": "^3.4.1",
         "web-vitals": "^2.1.4"
     },
-    "homepage": "https://an9383.github.io/dashboard-horizon/",
+    "homepage": "https://an9383.github.io/",
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
