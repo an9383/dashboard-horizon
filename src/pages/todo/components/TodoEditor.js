@@ -29,7 +29,7 @@ const TodoEditor = () => {
         if (e.key === 'Enter') {
             onSubmit()
         }
-    },[onKeyDown])
+    },[onSubmit])
 
     return (
         <Box py={5}>
